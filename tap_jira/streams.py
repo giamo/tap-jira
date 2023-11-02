@@ -796,6 +796,12 @@ class IssueStream(JiraStream):
                 Property("timespent", IntegerType),
                 Property("customfield_10030", ArrayType(StringType)),
                 Property("customfield_10031", ArrayType(StringType)),
+		Property(
+		    "customfield_10502",
+		    ObjectType(
+			Property("rating", IntegerType)
+		    )
+		),
                 Property(
                     "project",
                     ObjectType(
